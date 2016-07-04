@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pythagoras' Theorem - An R Web App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Pythagoras' Theorem - An R Web App">
+  <meta name="author" content="Mike Smart">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Pythagoras' Theorem - An R Web App</h1>
+    <h2></h2>
+    <p>Mike Smart<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This set of slides introduces the Web Application bulit for the Coursera Data Products Project.</p>
+
+<p>The R web application, built using the &#39;shiny&#39; package, is used to calculate the length of the hypotenuse for a right angled triangle, where the lengths for the other two sides have been input by the user.</p>
+
+<p>The link to the web application is: <a href="https://smartma.shinyapps.io/DataProdsProject01/">https://smartma.shinyapps.io/DataProdsProject01/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Pythagoras&#39; Theorem</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In mathematics, the Pythagorean theorem, also known as Pythagoras&#39; theorem, is a fundamental relation in Euclidean geometry among the three sides of a right triangle. It states that the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides. </p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/260px-Pythagorean.svg.png" alt="pt_img"></p>
+
+<p>Source: <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem">https://en.wikipedia.org/wiki/Pythagorean_theorem</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Pythagoras&#39; Theorem: Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Now that we know the theory, let&#39;s see an example in code, where a = 3, b = 4.....</p>
+
+<pre><code class="r">pyth &lt;- function(a, b){
+  sqrt(a^2+b^2)
+}
+pyth(3,4)
+</code></pre>
+
+<pre><code>## [1] 5
+</code></pre>
+
+<p>As we can see the length of the hypotenuse (side c) is 5.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Bonus Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The web application also gives us some bonus output, that of the area of the triangle. Which is calculated by the height of the triangle * the base of the triangle, divided by two. Again, a = 3, b = 4:</p>
+
+<pre><code class="r">areaT &lt;- function(a, b){
+  (a*b)/2
+}
+areaT(3,4)
+</code></pre>
+
+<pre><code>## [1] 6
+</code></pre>
+
+<p>The area of the triangle is 6.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Pythagoras&#39; Theorem'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Pythagoras&#39; Theorem: Example'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Bonus Output'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
